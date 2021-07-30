@@ -1,0 +1,860 @@
+
+
+/*
+
+This is all the css for the front page done all by my me
+Samuel maniscalchi Bäckman, 2021.
+
+Lovely to play with css and style things!!
+
+*/
+
+
+/* Variables to colours */
+:root {
+  --blue2:   #02A3FF;
+  --blue: #2DB3FF;
+  --white: #ffffff;
+  --pink: #d5c0fd;
+  --darkblue: rgb(32, 35, 48);
+  
+  
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+}
+
+
+body {
+  background-image: repeating-linear-gradient(
+      60deg, var(--darkblue), #111, var(--darkblue) 3px);
+  cursor: url(middlefinger.png) 4 4, auto;
+  width: 100%;
+  overflow: hidden;
+  animation: scroll-anim 4s ease forwards 7s;
+  cursor: none;
+  display: block;
+
+}
+
+
+
+/*Scrollbar customisation*/
+body::-webkit-scrollbar {
+  width: 1em;
+  cursor: url(middlefinger.png) 4 4, auto;
+}
+
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-image: repeating-linear-gradient(
+    120deg
+    , #fff, #eee, #fff 3px);
+    cursor: url(middlefinger.png) 4 4, auto;
+}
+
+
+body::-webkit-scrollbar-thumb {
+  background-image: repeating-linear-gradient(
+    120deg
+    , var(--blue2), var(--blue), var(--blue2) 3px);
+  border-radius: 1pc;
+ 
+  cursor: url(middlefinger.png) 4 4, auto;
+   
+}
+
+
+
+/*The background for the top - blue*/
+.background {
+  background-image: repeating-linear-gradient(
+      60deg, var(--darkblue), #111, var(--darkblue) 3px);
+  height: 80vh;
+  width: 100%;
+  cursor: url(middlefinger.png) 4 4, auto;
+}
+
+
+/*The intro text "sammi.nu and efects*/
+#intro {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: url(middlefinger.png) 4 4, auto;
+  animation: hide-anim 1.5s ease-out 5s forwards;
+}
+
+
+/*Letter one (s)*/
+#intro path:nth-child(2) {
+  stroke-dasharray: 495px;
+  stroke-dashoffset: 495px;
+  animation: line-anim 5.5s ease forwards;
+} 
+
+
+/*Letter two (a)*/
+#intro path:nth-child(3) {
+  stroke-dasharray: 491px;
+  stroke-dashoffset: 491px;
+  animation: line-anim 6s ease forwards 0.4s;
+} 
+
+
+/*Letter three (m)*/
+#intro path:nth-child(4) {
+  stroke-dasharray: 772px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 4s ease forwards 0.8s;
+} 
+
+
+/*Letter four (m)*/
+#intro path:nth-child(5) {
+  stroke-dasharray: 772px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 4s ease forwards 1.2s;
+} 
+
+
+/*Letter five (i)*/
+#intro path:nth-child(6) {
+  stroke-dasharray: 772px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 5s ease forwards 1.6s;
+} 
+
+
+/*Letter six (.)*/
+#intro path:nth-child(7) {
+  stroke-dasharray: 772px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 10s ease forwards 2s;
+} 
+
+
+/*Letter seven (n)*/
+#intro path:nth-child(8) {
+  stroke-dasharray: 772px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 4s ease forwards 2.4s;
+} 
+
+
+/*Letter eigth (u)*/
+#intro path:nth-child(9) {
+  stroke-dasharray: 776px;
+  stroke-dashoffset: 776px;
+  animation: line-anim 6s ease forwards 2.8s;
+} 
+
+
+/*Animation on my name at top*/
+.namn {
+  font-family: "Gochi Hand";
+  font-size: 20px;
+  color: var(--blue);
+  position: absolute;
+  top: 27%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  cursor: url(middlefinger.png) 4 4, auto;
+  text-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;  
+  animation: namn-anim 1.5s ease-out 6s forwards;
+}
+
+
+/*Arrow animation pointing on navbar*/
+#arrow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  cursor: url(middlefinger.png) 4 4, auto;  
+  animation: arrow-anim 1.5s ease-out 6.5s forwards;
+}
+
+
+
+
+/*navbar container*/
+.nav-container {
+  animation: nav-anim 1.5s ease-out 7s forwards;
+  opacity: 0;
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  cursor: url(middlefinger.png) 4 4, auto;
+  background-image: repeating-linear-gradient(
+    120deg
+    , #fff, #eee, #fff 5px);
+}
+
+
+.navbar {
+  display: grid;
+  align-items: center;
+  height: 45px;
+  width: 50%;
+  max-width: 1720px;
+  margin-left: auto;
+  margin-right: auto;  
+  cursor: url(middlefinger.png) 4 4, auto;
+  animation: nav-anim 1.5s ease-out 7s forwards;
+}
+
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  cursor: url(middlefinger.png) 4 4, auto;
+  animation: nav-anim 1.5s ease-out 7s forwards;
+}
+
+
+/*List with links */
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /*three links with "auto" spaces*/
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  justify-self: end;
+  font-family: "Gochi Hand";
+  font-size: 20px;
+  animation: nav-anim 1.5s ease-out 7s forwards;
+}
+
+
+/*Navbar links*/
+.nav-links {
+  margin-top: 10px;
+  opacity: 0.8;
+  color: black;
+  text-decoration: none;
+  cursor: url(middlefinger.png) 4 4, auto;
+}
+
+
+/*Settings when hovering navbar*/
+.nav-links:hover {
+  cursor: url(cursor.png) 4 4, auto;
+   
+}
+
+.nav-links:before, .nav-links:after{
+  opacity: 0;
+  transition: all 0.3s ease;	
+  font-size: 20px;
+}
+.nav-links:before{
+  content: '{';
+}
+.nav-links:after{
+  content: '}';
+}
+
+.nav-links:hover:before{
+  margin-right: 10px;
+  content: '{';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  opacity: 1;
+}
+.nav-links:hover:after{
+  margin-left: 10px;
+  content: '}';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+  opacity: 1;
+}
+
+
+/*Main settings and animations (the content under navbar)*/
+.main {
+  background-image: repeating-linear-gradient(
+  60deg, var(--darkblue), #111, var(--darkblue) 3px);
+  width: 100%;
+  height: 35pc;
+  font-family: "gochi hand";
+  opacity: 0;
+  color: white;
+  cursor: url(middlefinger.png) 4 4, auto;
+  animation: nav-anim 1.5s ease-out 7s forwards;
+}
+
+
+.headers {
+  text-align: center;
+  padding: 20px 20px 1px;
+  text-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;  
+  
+}
+
+
+
+.headers2 {
+  display: block;
+  text-align: center;
+  padding-top: 80px;
+  color: var(--blue);
+  font-family: 'gochi hand';
+  padding-bottom: 20px;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 15px #0498ee, 0 0 5px darkblue;
+}
+
+.my-work  {
+  display: none;
+}
+
+
+
+
+.about-me {
+  padding: 20px;
+  font-size: 20px;
+  columns: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+
+/*Picture of me*/
+.pic1 {
+  border-radius: 1pc;
+  width: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile first */
+.c {
+  float: left;
+  width: 100%;
+} 
+
+/* Responsive column widths */
+@media (min-width: 700px) {
+  /* 1 */
+  .c:first-child:last-child {
+    width: 100%;
+  }
+
+  /* 2 */
+  .c:nth-last-child(2):first-child,
+  .c:nth-last-child(2):first-child + .c {
+    width: 50%;
+  }
+
+  /* 3 */
+  .c {
+    width: 33.33333%;
+  }
+
+  /* 1 extra */
+  .c:nth-child(3n + 1):last-child {
+    width: 100%;
+  }
+
+  /* 2 extra */
+  .c:nth-child(3n + 1):nth-last-child(2),
+  .c:nth-child(3n + 1):nth-last-child(2) + .c {
+    width: 50%;
+  }
+}
+
+
+
+/* coloring/sizing */
+.c {
+  margin-bottom: 30px;
+  background-color: #75d6f9;
+  color: white;
+  padding: 50px;
+  box-sizing: border-box;
+  text-align: center; 
+  color: #ffff;
+  opacity: 0.9;
+  border-radius: 10px;
+  background-image: url(https://c1.wallpaperflare.com/preview/613/146/415/background-old-fashioned-music-sheet-music.jpg);
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+
+.c:nth-child(3n - 2) {
+  margin-bottom: 30px;
+  color: #ffff;
+  opacity: 0.9;
+  border-radius: 10px;
+  background-image: url(https://anekdot.se/wp-content/uploads/2018/02/franska-revolutionen-1.jpeg);
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+.c:nth-child(3n) {
+  background-color: #11a3d7;
+}
+
+
+/*The contact me section under my work sectino*/
+.contact {
+  width: 100%;
+  height: 47pc;
+  color: white;
+  background-image: repeating-linear-gradient(
+    60deg
+    , #242D4A, #111, #242D4A 3px);
+  font-family: "gochi hand";
+  opacity: 0;
+  animation: nav-anim 1.5s ease-out 7s forwards;
+  cursor: url(middlefinger.png) 4 4, auto;
+}
+
+
+/*header of contact me*/
+.send {
+  text-align: center;
+  padding: 20px 20px 1px;
+  font-size: 25px;background-image: repeating-linear-gradient(
+    60deg
+    , #242D4A, #111, #242D4A 3px);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;background-image: repeating-linear-gradient(
+    60deg
+    , #242D4A, #111, #242D4A 3px);
+  padding: 20px;
+}
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  color: white;
+  background-color: black;
+  border: 2px solid var(--blue2);
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+
+
+input[type=file] {
+  color: white;
+  background-color: black;
+  border: 2px solid var(--blue2);
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: black;
+  color: #76C78C;
+  font-family: "Gochi hand";
+  padding: 12px 20px;
+  border: 2px solid var(--blue2);
+  cursor: pointer;
+  font-size: 20px;  
+  transition: all 0.3s ease;
+  cursor: url(middlefinger.png) 4 4, auto;
+}
+
+
+input[type=reset] {
+  background-color: black;
+  color: #C776A6;
+  font-family: "Gochi hand";
+  padding: 12px 20px;
+  border: 2px solid var(--blue2);
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: url(middlefinger.png) 4 4, auto;
+}
+
+form {
+  text-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;
+}
+
+input[type=reset]:hover {
+  border: 2px solid white;
+  font-size: 21px;
+  transition: all 0.3s ease;
+}
+
+input[type=submit]:hover {
+  border: 2px solid white;
+  font-size: 21px;
+  transition: all 0.3s ease;
+}
+
+.line2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+.line3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/*Footer on the botton */
+.footer {
+  width: 100%;
+  height: 5pc;
+  background-color: #fff;
+  font-family: "gochi hand";
+  opacity: 0;
+  color: #403F51;
+  animation: nav-anim 1.5s ease-out 7s forwards;
+}
+
+/*My name and years ..... text on the footer*/
+.footer-content {
+  text-align: center;
+  font-family: none;
+  padding: 20px;
+}
+
+
+/* Desktop (responsive) */
+@media screen and (min-width: 900px) {
+  
+
+
+  /*Main settings and animations (the content under navbar)*/
+  .main {
+    background-image: repeating-linear-gradient(
+    60deg, var(--darkblue), #111, var(--darkblue) 3px);
+    width: 50%;
+    height: 40pc;
+    font-family: "gochi hand";
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    animation: nav-anim 1.5s ease-out 7s forwards;
+  }
+
+  /*Animation on my name at top*/
+  .namn {
+    font-family: "Gochi Hand";
+    font-size: 40px;
+    color: var(--blue);
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    cursor: url(middlefinger.png) 4 4, auto;
+    text-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;
+    animation: namn-anim 1.5s ease-out 6s forwards;
+  }
+
+  .headers {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;  
+  
+  }
+
+  .headers:hover {
+    text-shadow: 1px 1px 2px black, 0 0 15px #0498ee, 0 0 5px darkblue;
+    font-size: 21px;
+    transition: all 0.3s ease;
+    
+  }
+  
+  
+  /*The content under main with my work in it*/
+  .my-work {
+    display: block; 
+    width: 100%;
+    height: 835px;
+    align-items: center;
+    background-image: repeating-linear-gradient(
+      60deg, var(--darkblue), #111, var(--darkblue) 3px);
+    cursor: url(middlefinger.png) 4 4, auto;
+  }
+  
+
+
+
+  #wrapper{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;  
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+
+  .button{
+    text-decoration: none;
+    color: rgb(148, 148, 148);
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    padding: 10px;
+    cursor: url(middlefinger.png) 4 4, auto;
+  }
+  
+  
+  .button.two:before, .button.two:after{
+    opacity: 0;
+    transition: all 0.3s ease;	
+    font-size: 20px;
+  }
+  .button.two:before{
+    content: '{';
+  }
+  .button.two:after{
+    content: '}';
+  }
+
+  .button.two:hover:before{
+    margin-right: 10px;
+    content: '{';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  .button.two:hover:after{
+    margin-left: 10px;
+    content: '}';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+
+  .button-list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    text-align: center;
+    width: 100%;
+    justify-self: end;
+    font-family: 'Gochi Hand';
+  }
+
+  .p {
+    opacity: 0.8;
+    color: white;
+    font-size: 18px;
+    font-family: "Gochi Hand";
+  }
+
+  .p::before {
+    content: "* ";
+    color: #c69;
+  }
+
+  .plink {
+    opacity: 0.8;
+    color: #0787d1;
+    font-size: 18px;
+    font-family: "Gochi Hand";
+    text-decoration: underline;
+    cursor: url(middlefinger.png) 4 4, auto;
+    transition: all 0.3s ease;
+  }
+
+  .plink:hover {
+    font-size: 19px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    color: var(--blue);
+    text-shadow: 1px 1px 2px black, 0 0 15px #0498ee, 0 0 5px darkblue;
+  }
+  
+
+
+
+  
+
+
+  
+  .about-me {
+    padding-top: 1em;
+    line-height: 1.6;
+    transition: height 0.5s;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+
+  .about-me:hover {
+    text-shadow: 1px 1px 2px black, 0 0 15px #0498ee, 0 0 5px darkblue;
+    transition: all 0.3s ease;
+  }
+
+  .main-columns {
+    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;  
+    
+    grid-template-columns: repeat(3, auto);
+  }
+  
+  /*Picture of me*/
+  .pic1 {
+  border-radius: 1pc;
+  margin-top: 20px;
+  transition: all 1s ease;
+  }
+
+  .pic1:hover {
+    box-shadow: 1px 1px 2px black, 0 0 10px #0498ee, 0 0 5px darkblue;
+    transition: all 1s ease;
+    
+  }
+
+  
+
+  
+
+  .send {
+    width: 50%;
+  }
+
+  .container {
+    width: 50%;
+  }
+  
+
+  
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* BELOW IS ANIMATIONS !*/
+
+
+@keyframes line-anim{
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hide-anim {
+  to {
+    
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  }
+}
+
+@keyframes decrease-anim {
+  to {
+    height: 50vh;
+  }
+}
+
+@keyframes namn-anim {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes arrow-anim {
+  to {
+    top: 50%; 
+    opacity: 1;
+  }
+}
+@keyframes nav-anim {
+  to { 
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-anim {
+  to { 
+    overflow: visible;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  intro {
+      max-width: 200px;
+  }
+
+}
