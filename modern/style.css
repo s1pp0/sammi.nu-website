@@ -22,6 +22,7 @@ Lovely to play with css and style things!!
 }
 
 * {
+  cursor: url(middlefinger.png) 4 4, auto;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
